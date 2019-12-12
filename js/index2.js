@@ -8,6 +8,10 @@ $(document).ready(function(){
     });
 	 $('select').material_select();
   });
+  	
+  $(document).ready(function(){
+	$('.parallax').parallax();
+  });
   window.onload = function() {
  
 	$(".drag-target").addClass('hide');
@@ -29,7 +33,9 @@ $(document).ready(function(){
 		$("#slide-out").sideNav('hide');
 		//$(".drag-target").removeClass('hide');
 	});
-	
+
+
+
 	//login
 	$(document).on('click',"#login",function (){
 	direcion=$(this).attr("href")

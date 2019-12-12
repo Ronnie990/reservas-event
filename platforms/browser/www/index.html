@@ -10,10 +10,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<main>
   <!-- contenido de app -->
-  <div id="page_content" class=" page  ">
-    <div id="">
+  <div id="page_content" class=" hide page  ">
+    <div id="" class="navbar-fixed">
       <nav class=" black ">
         <div class="nav-wrapper ">
           <a href="#" class="brand-logo nabar-brand right"><img src="img/logo4.png" height="45" width=""></img></a>
@@ -26,23 +26,25 @@
               </div>
             </li>
           </ul>
-          <ul id="slide-out" class="side-nav">
+          <ul id="slide-out" class="side-nav sidenav-fixed">
             <li><a>
                 <h4>Navegar</h4>
-              </a></li>
+              </a>
+            </li>
             <li><a href="#page_content" id="eventos_link" type="events" str="#eventos"
                 onclick="Materialize.showStaggeredList('#eventos_cards')" class="barra"><span
                   class="material-icons">place</span> Eventos</a></li>
             <li><a href="#page_content" type="reserva" str="#reservaciones" class="barra"><span
                   class="material-icons">event</span> Reservaciones</a></li>
-            <li><a href="#!" type="ofertas" class="barra"><span class="material-icons">whatshot</span> Ofertas</a></li>
+            <li><a href="#page_content" type="ofertas" str="#ofertas" class="barra"><span class="material-icons">whatshot</span> Ofertas</a></li>
             <li><a href="#!" type="about" class="barra"><span class="material-icons">info</span> About</a></li>
           </ul>
         </div>
       </nav>
     </div>
-    <div id="main_content" class="tab-content">
-      <div id="reservaciones" class="tab-pane  ">
+    
+    <div id="main_content" class="tab-content container">
+      <div id="reservaciones" class="tab-pane hide ">
         <div class=''>
           <h5 class=""><span class="material-icons">event</span> Reservaciones</h5>
         </div>
@@ -75,9 +77,25 @@
           </li>
         </ul>
       </div>
+      <div id="ofertas" class="tab-pane hide">
+          <div id="ofertas" class="parallax-container">
+              <div class="parallax"><img src="http://rasbroh.ddns.net:5123/reservaciones/img/1.jpg"></div>
+            </div>
+            <div class="section white">
+              <div class="row container">
+                <h2 class="header">Parallax</h2>
+                <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+              </div>
+            </div>
+            <div class="parallax-container">
+              <div class="parallax"><img src="http://rasbroh.ddns.net:5123/reservaciones/img/1.jpg"></div>
+            </div>
+        
+      </div>
     </div>
     <div id="reload" class="fixed-action-btn reload" style="bottom: 25px; right: 10px;"><a
-        class="btn-floating btn yellow darken-1 " info=""><i class="material-icons  ">cached</i></a></div>
+        class="btn-floating btn yellow darken-1 " info=""><i class="material-icons  ">cached</i></a>
+    </div>
     <div id="modal1" class="modal">
 
     </div>
@@ -130,7 +148,7 @@
     </div>
   </div>
   <!--Registro_pagina-->
-  <div id="registre_page" class="page ">
+  <div id="registre_page" class="page hide ">
     <div id="top_registre" class="center row">
       <div class="col s12 indigo">
         <img src="img/logo2.png" height="100" width="100"></img>
@@ -191,7 +209,7 @@
     </div>
 
   </div>
-</body>
+</main>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/cordova.js"></script>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
