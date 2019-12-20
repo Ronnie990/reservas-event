@@ -13,9 +13,22 @@
 <main>
   <!-- contenido de app -->
    <!---->
-  <div id="page_content" class="  page scale-transition  ">
-      <div id="reload" class="fixed-action-btn reload"  >
+<div id="page_content" class="  page scale-transition  ">
+      <!-- <div id="reload" class="fixed-action-btn reload"  >
         <a class="btn-floating btn-small black darken-1 " info=""><i class="material-icons  ">event</i></a>
+    </div> 
+	--> 
+
+    <div class="fixed-action-btn ">
+      <a class="btn-floating btn-large red  ">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a  id="reload" class="btn-floating red reload"><i class="material-icons">cached</i></a></li>
+        <li><a class="btn-floating yellow darken-1 modal-trigger" href="#calendar_modal" target=""><i class="material-icons">event</i></a></li>
+        <li><a class="btn-floating green modal-trigger" href="#modal_bajo"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+      </ul>
     </div>
 
 
@@ -29,7 +42,7 @@
                 onclick="Materialize.showStaggeredList('#slide-out')"><i class="material-icons">menu</i></a></li>
             <li>
               <div id="" class="grey chip white-text">
-                <img class="z-depth-3" src='http://icons.iconarchive.com/icons/froyoshark/enkel/512/Contacts-icon.png'>
+                <img class="z-depth-3" src='img/Contacts-icon_red.png'>
                 <a id="nombre_user" class="cambio username" str="#login_page" href="#login_page">LogIn</a>
               </div>
             </li>
@@ -40,37 +53,38 @@
               </a>
             </li>
             <li><a href="#page_content" id="eventos_link" type="events" str="#eventos"
-                onclick="Materialize.showStaggeredList('#eventos_cards')" class="barra"><span
-                  class="material-icons">event</span> Eventos</a></li>
-            <li><a href="#page_content" type="reserva" str="#reservaciones" class="barra"><span
-                  class="material-icons">event_available</span> Reservaciones</a></li>
-            <li><a href="#page_content" type="ofertas" str="#ofertas" class="barra"><span class="material-icons">whatshot</span> Ofertas</a></li>
+                onclick="Materialize.showStaggeredList('#eventos_cards')" class="barra"><span class="material-icons">local_play</span> Eventos</a></li>
+            <li><a href="#page_content" type="ofertas" str="#reservar" class="barra hide"><span class="material-icons">local_library</span> Reservar</a></li>
+            <li><a href="#page_content" type="reserva" str="#reservaciones" class="barra hide"><span class="material-icons">event_available</span> Reservaciones</a></li>
+            
+                <li><a href="#page_content" type="ofertas" str="#ofertas" class="barra"><span class="material-icons">whatshot</span> Ofertas</a></li>
+
             <li><a href="#!" type="about" class="barra"><span class="material-icons">info</span> About</a></li>
-            <li><a id="nombre_user" class="cambio username" str="#login_page" href="#login_page">LogIn</a></li>
+            <li><a id="nombre_user" class="cambio username hide" str="#login_page" href="#login_page">LogIn</a></li>
           </ul>
         </div>
       </nav>
     </div>
     
-    <div id="main_content" class="tab-content container">
+    <div id="main_content" class="tab-content">
       <div id="reservaciones" class="tab-pane hide ">
         <div class=''>
           <h5 class=""><span class="material-icons">event_available</span> Reservaciones</h5>
-          <template>
-            <p>{ronnie}</p>
-          </template>
+          
         </div>
         <div class="divider"></div>
+        <div class="container">
         <ul id="reserva_cards" class="collapsible popout" data-collapsible="accordion">
 
         </ul>
+      </div>
       </div>
       <div id="eventos" class="tab-pane">
         <div class=''>
           <h5 class=""><span class="material-icons">event</span> Eventos</h5>
         </div>
         <div class="divider"></div>
-
+        <div class="container">      
         <ul id="events_cards">
           <li class="center">
             <div class="preloader-wrapper  big active">
@@ -89,6 +103,22 @@
           </li>
         </ul>
       </div>
+      </div>
+      <div id="reservar" class="tab-pane hide">
+        <div id="" class="parallax-container">
+            <div class="parallax"><img src="http://rasbroh.ddns.net:5123/reservaciones/img/1.jpg"></div>
+          </div>
+          <div class="section white">
+            <div class="row container">
+              <h2 class="header">Parallax</h2>
+              <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+            </div>
+          </div>
+          <div class="parallax-container">
+            <div class="parallax"><img src="http://rasbroh.ddns.net:5123/reservaciones/img/1.jpg"></div>
+          </div>
+      
+    </div>
       <div id="ofertas" class="tab-pane hide">
           <div id="ofertas" class="parallax-container">
               <div class="parallax"><img src="http://rasbroh.ddns.net:5123/reservaciones/img/1.jpg"></div>
@@ -109,8 +139,136 @@
     <div id="modal1" class="modal">
 
     </div>
+
+    
+
+    <!-- Modal Structure -->
+    <div id="modal_bajo" class="modal bottom-sheet">
+      <div class="modal-content calendar_modal">
+        <div class="jzdbox1 jzdbasf jzdcal">
+
+          <div class="jzdcalt">June 2017</div>
+          
+          <span>Su</span>
+          <span>Mo</span>
+          <span>Tu</span>
+          <span>We</span>
+          <span>Th</span>
+          <span>Fr</span>
+          <span>Sa</span>
+          
+          
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span>1</span>
+          <span class="circle_calendar" data-title="My 25th birthday!">2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+          <span class="circle_calendar" data-title="2 month anniversary!">12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span class="circle_calendar" data-title="#MusicMonday - share your favorite song!">22</span>
+          <span>23</span>
+          <span>24</span>
+          <span>25</span>
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          <span class="jzdb"><!--BLANK--></span>
+          </div>
+      </div>
+      
+    </div>
+
+   <div id="calendar_modal" class="modal">
+    <div class="jzdbox1 jzdbasf jzdcal">
+
+      <div class="jzdcalt">June 2017</div>
+      
+      <span>Su</span>
+      <span>Mo</span>
+      <span>Tu</span>
+      <span>We</span>
+      <span>Th</span>
+      <span>Fr</span>
+      <span>Sa</span>
+      
+      
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span>1</span>
+      <span class="circle_calendar" data-title="My 25th birthday!">2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+      <span>10</span>
+      <span>11</span>
+      <span class="circle_calendar" data-title="2 month anniversary!">12</span>
+      <span>13</span>
+      <span>14</span>
+      <span>15</span>
+      <span>16</span>
+      <span>17</span>
+      <span>18</span>
+      <span>19</span>
+      <span>20</span>
+      <span>21</span>
+      <span class="circle_calendar" data-title="#MusicMonday - share your favorite song!">22</span>
+      <span>23</span>
+      <span>24</span>
+      <span>25</span>
+      <span>26</span>
+      <span>27</span>
+      <span>28</span>
+      <span>29</span>
+      <span>30</span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      <span class="jzdb"><!--BLANK--></span>
+      </div>
+
+
+
+   </div>
    
-  </div>
+  
+   </div>
   <!-- pagina de logeo-->
   <div id="login_page" class="page hide login  ">
     <div class="center row">
@@ -161,12 +319,12 @@
   <!--Registro_pagina-->
   <div id="registre_page" class="page hide ">
     <div id="top_registre" class="center row">
-      <div class="col s12 indigo">
-        <img src="img/logo2.png" height="100" width="100"></img>
+      <div class="col s12 black">
+        <img class="logo_registro" src="img/logo4.png" height="70" width=""></img>
       </div>
       <div class="row center">
-        <div class="col yellow s12">
-          <h4 class=" white-text ">Registro</h4>
+        <div class="col red s12">
+          <p class="white-text " >Registro</p>
         </div>
       </div>
     </div>
@@ -211,20 +369,27 @@
           </div>
       </form>
       <div class="row">
-        <div class=" col s12">
-          <button class="btn red right waves-effect waves-light cambio" href="#login_page">Cancelar</button>
-          <button class="btn indigo waves-effect waves-light" id="registro_p" href="#page_content">Registrar</button>
+        <div class=" col s6">
+          <button class="btn Black waves-effect waves-light" id="registro_p" href="#page_content">Registrar</button>
+         
+        </div>
+        <div class="col s6">
+            <button class="btn red right waves-effect waves-light cambio" href="#login_page">Cancelar</button>
+
         </div>
       </div>
 
     </div>
 
   </div>
+  </div>
 </main>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/cordova.js"></script>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/mustache.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/jscalendar.js"></script>
 <script type="text/javascript" src="js/index2.js"></script>
 
 </html>

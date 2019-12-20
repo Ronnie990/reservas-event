@@ -16,6 +16,11 @@ img .login{
 	margin: 0;
 }
 
+.logo_registro{
+
+	padding: 10;
+}
+
 .visible,.hide {
   overflow: hidden;
   /* This container should not have padding, borders, etc. */
@@ -30,9 +35,7 @@ img .login{
   opacity: 0;
   transition: visibility 0s .2s, opacity .2s linear;
 }
-.visible > div, .hide > div {
-  /* Put any padding, border, min-height, etc. here. */
-}
+
 .hide > div {
   margin-top: -10000px;
   transition: margin-top 0s 0.2s;
@@ -44,4 +47,86 @@ img .login{
     background-size: cover;
     height: 100vh;
     min-height: 60tem;
+}
+
+
+
+
+
+.jzdbox1 {
+  width:315px; 
+   
+  border-radius:5px; 
+  overflow:hidden; 
+  display:block; 
+  margin-bottom:10px; 
+  box-shadow:0 0 10px #201d1c; 
+  margin:0 auto; 
+  /* margin-top:100px; */
+}
+
+.jzdcal {
+  padding:0 10px 10px 10px; 
+  box-sizing:border-box!important; 
+  background:darkred; 
+  
+}
+
+.jzdcalt {
+  font:18px 'Roboto'; 
+  font-weight:700; 
+  color:#f7f3eb; 
+  display:block; 
+  margin:18px 0 0 0; 
+  text-transform:uppercase; 
+  text-align:center; 
+  letter-spacing:1px;
+}
+
+.jzdcal span {
+  font:11px 'Roboto'; 
+  font-weight:400; 
+  color:white; 
+  text-align:center; 
+  width:42px; 
+  height:42px; 
+  display:inline-block; 
+  float:left; 
+  overflow:hidden; 
+  line-height:40px;
+}
+
+.jzdcal .jzdb:before {
+  opacity:0.3; 
+  content:'o';
+}
+
+.circle_calendar {
+  border:1px solid #f7f3eb; 
+  box-sizing:border-box!important; 
+  border-radius:200px!important;
+}
+
+span[data-title]:hover:after, 
+div[data-title]:hover:after {
+  font:11px 'Roboto'; 
+  font-weight:400; 
+  content:attr(data-title); 
+  position:absolute; 
+  margin:0 0 100px; 
+  background:#282423; 
+  border:1px solid #f7f3eb; 
+  color:#f7f3eb; 
+  padding:5px; 
+  z-index:9999; 
+  min-width:150px; 
+  max-width:150px;
+}
+
+#calendar_modal{
+  background-color: black;
+}
+.modal .modal-content{
+  padding: 10;
+  background-color: black;
 }

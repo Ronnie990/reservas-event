@@ -7,20 +7,24 @@ $(document).ready(function(){
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
 	 $('select').material_select();
+	 $('.parallax').parallax();
+	 $('.modal-trigger').leanModal();
+	 $('.slider').slider({full_width: true});
   });
   window.onload = function() {
  
 	$(".drag-target").addClass('hide');
+	cargar("events","");
 	
 }
     $(".button-collapse").sideNav();
-		$(document).ready(function(){
+	$(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+//    $('.modal-trigger').leanModal();
   });
 
     $(document).ready(function(){
-      $('.slider').slider({full_width: true});
+ //     $('.slider').slider({full_width: true});
     });
 
 	$(document).on('click',".barra",function (){
@@ -50,7 +54,8 @@ $(document).ready(function(){
 							cambio(direcion);
 							cargar("events",info[0]);
 							cargar("reserva",info[0]);
-							$("#reload").attr("info",info[0])
+							$(".barra.hide").removeClass("hide");
+							$("#reload").attr("info",info[0]);
 						}
 					}
 		});
