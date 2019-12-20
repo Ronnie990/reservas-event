@@ -52,7 +52,6 @@ $(document).ready(function(){
 							alert("error");
 						}else{
 							info=result.split("*");
-							$("#nombre_user").append(info[1]);
 							cambio(direcion);
 							cargar("events",info[0]);
 							cargar("reserva",info[0]);

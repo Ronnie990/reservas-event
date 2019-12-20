@@ -11,3 +11,37 @@ img .login{
 	width: 50%;
 	height: 100%;
 }
+.username{
+	padding: 0; 
+	margin: 0;
+}
+
+.visible,.hide {
+  overflow: hidden;
+  /* This container should not have padding, borders, etc. */
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .2s, opacity .2s linear;
+}
+.visible > div, .hide > div {
+  /* Put any padding, border, min-height, etc. here. */
+}
+.hide > div {
+  margin-top: -10000px;
+  transition: margin-top 0s 0.2s;
+}
+
+.lodgin{
+    background-image: url(/img/paralax1.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60tem;
+}

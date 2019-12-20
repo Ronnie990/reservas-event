@@ -46,7 +46,7 @@ $(document).ready(function(){
 							alert("error");
 						}else{
 							info=result.split("*");
-							$("#nombre_user").append(info[1]);
+							$("#nombre_user").text(info[1]);
 							cambio(direcion);
 							cargar("events",info[0]);
 							cargar("reserva",info[0]);
@@ -90,10 +90,15 @@ $(document).on("click",".cambio",function(){
 		cambio($(this).attr("href"));
 });
 	function cambio(direcion){
+		$(".page").removeClass('visible');
 		$(".page").addClass('hide');
 		$(direcion).removeClass('hide');
+		$(direcion).addClass('visible');
+		
 		if(direcion=="#page_content"){
-			$(".drag-target").removeClass('hide');	
+			$(".drag-target").removeClass('hide');
+			$(".drag-target").addClass('visible');	
+
 		}
 	};
 //cargar contenido

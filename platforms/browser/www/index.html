@@ -12,17 +12,25 @@
 
 <main>
   <!-- contenido de app -->
-  <div id="page_content" class=" hide page  ">
+   <!---->
+  <div id="page_content" class="  page scale-transition  ">
+      <div id="reload" class="fixed-action-btn reload"  >
+        <a class="btn-floating btn-small black darken-1 " info=""><i class="material-icons  ">event</i></a>
+    </div>
+
+
+            
     <div id="" class="navbar-fixed">
       <nav class=" black ">
         <div class="nav-wrapper ">
           <a href="#" class="brand-logo nabar-brand right"><img src="img/logo4.png" height="45" width=""></img></a>
           <ul class="leflt">
-            <li><a href="#" data-activates="slide-out" class="button-collapse leflt"
+            <li><a href="#" data-activates="slide-out" class="button-collapse  leflt"
                 onclick="Materialize.showStaggeredList('#slide-out')"><i class="material-icons">menu</i></a></li>
             <li>
-              <div id="nombre_user" class="grey chip white-text">
+              <div id="" class="grey chip white-text">
                 <img class="z-depth-3" src='http://icons.iconarchive.com/icons/froyoshark/enkel/512/Contacts-icon.png'>
+                <a id="nombre_user" class="cambio username" str="#login_page" href="#login_page">LogIn</a>
               </div>
             </li>
           </ul>
@@ -33,11 +41,12 @@
             </li>
             <li><a href="#page_content" id="eventos_link" type="events" str="#eventos"
                 onclick="Materialize.showStaggeredList('#eventos_cards')" class="barra"><span
-                  class="material-icons">place</span> Eventos</a></li>
+                  class="material-icons">event</span> Eventos</a></li>
             <li><a href="#page_content" type="reserva" str="#reservaciones" class="barra"><span
-                  class="material-icons">event</span> Reservaciones</a></li>
+                  class="material-icons">event_available</span> Reservaciones</a></li>
             <li><a href="#page_content" type="ofertas" str="#ofertas" class="barra"><span class="material-icons">whatshot</span> Ofertas</a></li>
             <li><a href="#!" type="about" class="barra"><span class="material-icons">info</span> About</a></li>
+            <li><a id="nombre_user" class="cambio username" str="#login_page" href="#login_page">LogIn</a></li>
           </ul>
         </div>
       </nav>
@@ -46,7 +55,10 @@
     <div id="main_content" class="tab-content container">
       <div id="reservaciones" class="tab-pane hide ">
         <div class=''>
-          <h5 class=""><span class="material-icons">event</span> Reservaciones</h5>
+          <h5 class=""><span class="material-icons">event_available</span> Reservaciones</h5>
+          <template>
+            <p>{ronnie}</p>
+          </template>
         </div>
         <div class="divider"></div>
         <ul id="reserva_cards" class="collapsible popout" data-collapsible="accordion">
@@ -55,7 +67,7 @@
       </div>
       <div id="eventos" class="tab-pane">
         <div class=''>
-          <h5 class=""><span class="material-icons">place</span> Eventos</h5>
+          <h5 class=""><span class="material-icons">event</span> Eventos</h5>
         </div>
         <div class="divider"></div>
 
@@ -93,15 +105,14 @@
         
       </div>
     </div>
-    <div id="reload" class="fixed-action-btn reload" style="bottom: 25px; right: 10px;"><a
-        class="btn-floating btn yellow darken-1 " info=""><i class="material-icons  ">cached</i></a>
-    </div>
+    
     <div id="modal1" class="modal">
 
     </div>
+   
   </div>
   <!-- pagina de logeo-->
-  <div id="login_page" class="page login  ">
+  <div id="login_page" class="page hide login  ">
     <div class="center row">
       <div class="col s12 ">
         <img src="img/logo2.png" height="200" width="200"></img>
